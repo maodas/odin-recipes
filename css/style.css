@@ -5,3 +5,33 @@ h1 {
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
+
+h2 {
+    background-color: #167c19; /* Green background */
+    color: white; /* White text */
+    padding: 20px; /* Adds space inside */
+    border-radius: 10px; /* Rounds corners */
+    text-align: center;
+    display: inline-block;
+}
+
+ul {
+    list-style: none; /* Removes default bullets */
+}
+ul li::before {
+    content: "✔ "; /* Adds a checkmark before each item */
+    color: green;
+    font-weight: bold;
+}
+ol {
+    list-style: none; /* Removes default numbers */
+    counter-reset: custom-counter;
+}
+ol li {
+    counter-increment: custom-counter;
+}
+ol li::before {
+    content: counter(custom-counter) ") "; /* Custom number style */
+    font-weight: bold;
+    color: blue;
+}
